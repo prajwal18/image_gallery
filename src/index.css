@@ -1,13 +1,48 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*,*::before,*::after{
+  padding: 0; margin: 0; box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Individual Image in the list */
+.image-item{
+  position: relative;
+  overflow: hidden;
+}
+.image-desc{
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%;
+  font-family: Roboto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: rgb(173, 173, 173);
+  gap: 2rem;
+}
+.image-desc div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.image-desc a {
+  text-decoration: none;
+  color: rgb(205, 205, 205);
+  font-weight: 700;
+}
+.image-desc a span{
+  font-weight: 400;
+  color: rgb(173, 173, 173);
+}
+
+.zoom-icon, .close-icon{
+  cursor: pointer;
+}
+.zoom-icon:hover{
+  color: white;
+}
+
+/*Dialog*/
+.dialog-img{
+  width: 100%;
+  max-width: 500px;
 }
